@@ -1,0 +1,14 @@
+{
+  "id": "gemma-3",
+  "name": "Gemma 3",
+  "status": "available",
+  "statusLabel": "Tersedia",
+  "emptyMessage": "Belum ada model yang cocok di generasi ini.",
+  "models": [
+    { "name": "Gemma 3 270M", "parameters": "270M", "description": "Teks · konteks 32K", "source": "https://ai.google.dev/gemma/docs/core/model_card_3" },
+    { "name": "Gemma 3 1B", "parameters": "1B", "description": "Teks dan gambar · konteks 32K", "source": "https://ai.google.dev/gemma/docs/core/model_card_3" },
+    { "name": "Gemma 3 4B", "parameters": "4B", "description": "Teks dan gambar · konteks 128K", "source": "https://ai.google.dev/gemma/docs/core/model_card_3" },
+    { "name": "Gemma 3 12B", "parameters": "12B", "description": "Teks dan gambar · konteks 128K", "source": "https://ai.google.dev/gemma/docs/core/model_card_3" },
+    { "name": "Gemma 3 27B", "parameters": "27B", "description": "Teks dan gambar · konteks 128K", "source": "https://ai.google.dev/gemma/docs/core/model_card_3" }
+  ]
+}

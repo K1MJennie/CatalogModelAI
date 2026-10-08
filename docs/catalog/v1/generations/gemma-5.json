@@ -1,0 +1,8 @@
+{
+  "id": "gemma-5",
+  "name": "Gemma 5",
+  "status": "future",
+  "statusLabel": "Direncanakan",
+  "emptyMessage": "Belum ada data model untuk generasi ini.",
+  "models": []
+}

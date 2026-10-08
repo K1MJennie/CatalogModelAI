@@ -1,0 +1,14 @@
+{
+  "id": "gemma-4",
+  "name": "Gemma 4",
+  "status": "available",
+  "statusLabel": "Tersedia",
+  "emptyMessage": "Belum ada model yang cocok di generasi ini.",
+  "models": [
+    { "name": "Gemma 4 E2B", "parameters": "2.3B efektif", "description": "Teks, gambar, dan audio · konteks 128K", "source": "https://ai.google.dev/gemma/docs/core/model_card_4" },
+    { "name": "Gemma 4 E4B", "parameters": "4.5B efektif", "description": "Teks, gambar, dan audio · konteks 128K", "source": "https://ai.google.dev/gemma/docs/core/model_card_4" },
+    { "name": "Gemma 4 12B Unified", "parameters": "11.95B", "description": "Teks, gambar, dan audio · konteks 256K", "source": "https://ai.google.dev/gemma/docs/core/model_card_4" },
+    { "name": "Gemma 4 26B A4B", "parameters": "25.2B total · 3.8B aktif", "description": "MoE · teks dan gambar · konteks 256K", "source": "https://ai.google.dev/gemma/docs/core/model_card_4" },
+    { "name": "Gemma 4 31B", "parameters": "30.7B", "description": "Teks dan gambar · konteks 256K", "source": "https://ai.google.dev/gemma/docs/core/model_card_4" }
+  ]
+}

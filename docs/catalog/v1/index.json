@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "signature": "signatures/index.sig",
+  "generations": [
+    { "id": "gemma-3", "name": "Gemma 3", "status": "available", "statusLabel": "Tersedia", "file": "generations/gemma-3.json" },
+    { "id": "gemma-4", "name": "Gemma 4", "status": "available", "statusLabel": "Tersedia", "file": "generations/gemma-4.json" },
+    { "id": "gemma-5", "name": "Gemma 5", "status": "future", "statusLabel": "Direncanakan", "file": "generations/gemma-5.json" }
+  ]
+}
