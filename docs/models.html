@@ -14,10 +14,10 @@
 </head>
 <body>
   <a class="skip-link" href="#main" data-text="skip">Lewati ke konten</a>
-  <header class="site-header"><div class="container header-inner"><a class="wordmark" href="./index.html#technology">moezza<span>.</span></a><div class="preferences"><button type="button" class="control" data-language-toggle>EN</button><button type="button" class="control" data-theme-toggle>Gelap</button></div></div></header>
+  <header class="site-header"><div class="container header-inner"><a class="wordmark" href="./index.html#technology">moezza<span>.</span></a><div class="preferences"><select class="control language-select" data-language-select aria-label="Pilih bahasa"><option value="id">ID</option><option value="en">EN</option><option value="ja">JA</option></select><button type="button" class="control" data-theme-toggle>Gelap</button></div></div></header>
   <main class="container catalog-main" id="main" tabindex="-1">
     <a class="text-link" href="./index.html#technology" data-text="back">Kembali ke Moezza</a>
-    <div class="catalog-heading"><div><p class="eyebrow" data-text="catalog">Katalog model</p><h1>Gemma</h1><p data-text="intro">Model terbuka dari Google, disusun menurut generasi dan ukuran.</p></div><p id="catalog-version"></p></div>
+    <div class="catalog-heading"><div><p class="eyebrow" data-text="catalog">Katalog model</p><h1 data-text="modelName">Gemma</h1><p data-text="intro">Model terbuka dari Google, disusun menurut generasi dan ukuran.</p></div><p id="catalog-version"></p></div>
     <div class="catalog-controls"><div class="field"><label for="search" data-text="search">Cari nama atau ukuran</label><input id="search" type="search" autocomplete="off" placeholder="12B"></div><div class="field"><label for="generation-filter" data-text="generation">Generasi</label><select id="generation-filter"><option value="all" data-text="all">Semua generasi</option></select></div></div>
     <p id="catalog-status" role="status" aria-live="polite">Memuat data model…</p><div id="catalog"></div>
     <p class="catalog-notice" data-text="notice">Berkas tanda tangan katalog masih placeholder dan belum diverifikasi.</p>

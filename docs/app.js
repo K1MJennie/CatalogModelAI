@@ -1,12 +1,12 @@
 const english = {
-  skip: 'Skip to content', navigation: 'Main navigation', footerNavigation: 'Footer navigation', home: 'Home', product: 'Product', technology: 'Technology', about: 'About', contact: 'Contact',
+  skip: 'Skip to content', navigation: 'Main navigation', footerNavigation: 'Footer navigation', menu: 'Menu', home: 'Home', product: 'Product', technology: 'Technology', about: 'About', contact: 'Contact',
   heroEyebrow: 'Moezza / A thinking companion for Android', heroLine: 'Make room', heroEnd: 'for', heroEm: 'your thoughts.',
   heroDescription: 'From unfinished ideas to everyday curiosity. Start a conversation with AI, right on your phone.', heroAction: 'See Moezza in conversation', heroNote: 'Android · Gemma models · On-device AI', hello: 'hello.', heroTasks: 'Ways Moezza can help', taskWrite: 'Write', taskSummarize: 'Summarize', taskImage: 'Ask about an image', heroImageAlt: 'Moezza home screen on a phone', heroImageCaption: 'Moezza app screen from the images you provided.',
   phoneSub: 'Room for your story.', phoneGreeting: 'What’s on your mind?', phoneQuestion: 'So many ideas. Where do I even start?', phoneAnswer: 'One at a time. Which idea makes you most curious?', phonePlaceholder: 'Share a thought...', phoneModel: 'Gemma / on your device', concept: 'App concept illustration', heroFooter: 'Small thoughts. New possibilities.',
   productEyebrow: '01 / Moezza features', productTitle: 'One place,', productEm: 'many ways to help.', productDescription: 'Watch Moezza in action as the app screens slide by.', featureCarouselLabel: 'Moezza app features', previousFeature: 'Previous feature', nextFeature: 'Next feature',
   technologyEyebrow: '02 / Behind the conversation', techTitle: 'Close to you.', techEm: 'On your device.', techDescription: 'Moezza runs Gemma models on your phone. Once a compatible model is downloaded, local conversations can work without a connection.', deviceBoundary: 'Inside your phone', flowMessage: 'Help me develop this idea.', localModel: 'Local AI model', flowAnswer: 'An idea becomes a conversation.', techCaption: 'Local processing illustration. Compatibility and speed depend on the model and device.',
   catalogEyebrow: '03 / Model catalog', catalogTitle: 'Meet the models.', catalogEm: 'Find the right fit.', catalogIntro: 'A few Gemma models, from smaller options for mobile devices to larger models for more capable hardware.',
-  modelSize: 'Parameters', modelContext: 'Context', modelSource: 'Official specifications', model4e4b: 'A smaller on-device model with text, image, and audio input.', model4e4bSize: '4.5B effective', model4e2b: 'A more compact variant with text, image, and audio input.', model4e2bSize: '2.3B effective', model412b: 'A larger variant for text, image, and audio.', model3ne4b: 'Designed for everyday devices with text, image, and audio input.', model3ne4bSize: '4B effective', model3ne2b: 'A lighter mobile variant with text, image, and audio input.', model3ne2bSize: '2B effective', model34b: 'A text and image model with a long context window.', catalogNote: 'This is a summary of the Gemma model family, not a list of models guaranteed to be available in Moezza. Compatibility depends on the device and app version.',
+  modelSize: 'Parameters', modelContext: 'Context', context128: '128K tokens', context256: '256K tokens', context32: '32K tokens', modelSource: 'Official specifications', model4e4b: 'A smaller on-device model with text, image, and audio input.', model4e4bSize: '4.5B effective', model4e2b: 'A more compact variant with text, image, and audio input.', model4e2bSize: '2.3B effective', model412b: 'A larger variant for text, image, and audio.', model3ne4b: 'Designed for everyday devices with text, image, and audio input.', model3ne4bSize: '4B effective', model3ne2b: 'A lighter mobile variant with text, image, and audio input.', model3ne2bSize: '2B effective', model34b: 'A text and image model with a long context window.', catalogNote: 'This is a summary of the Gemma model family, not a list of models guaranteed to be available in Moezza. Compatibility depends on the device and app version.',
   aboutEyebrow: '04 / The Moezza story', aboutTitle: 'It started as an idea.', aboutEm: 'Now it has a place to talk.', aboutDescription: 'From the first question in August to the page you are seeing today.', aboutAction: 'Share your perspective', timelineLabel: 'Moezza development timeline',
   storyDate1: '5 Aug 2026', storyTitle1: 'The first idea', storyText1: 'Moezza began with an idea for a thinking companion you could carry on your phone.',
   storyDate2: '17 Aug 2026', storyTitle2: 'Designing the app', storyText2: 'The conversation flow and app design began to take shape.',
@@ -17,16 +17,18 @@ const english = {
   contactEyebrow: '05 / Room for feedback', contactTitle: 'From you,', contactEm: 'to Moezza.', contactDescription: 'An idea or a suggestion? Put it into words here.', contactNotice: 'Our contact channels are not active yet. This form creates a downloadable draft; it does not send a message.', name: 'Name', email: 'Email', topic: 'Topic', feedback: 'Product feedback', collaboration: 'Collaboration', introduction: 'Getting to know Moezza', message: 'Message', messagePlaceholder: 'Write your idea or question (at least 10 characters)', draftLocal: 'Created on your device.', prepareDraft: 'Prepare draft',
   footerDescription: 'Room for your thoughts.', catalog: 'Model catalog', contactExamples: 'Example contacts · not active', backTop: 'Back to top', draftReady: 'Your draft is ready.', closeDraft: 'Close draft', draftDisclaimer: 'Your message has not been sent. Download a copy to keep.', downloadDraft: 'Download .txt draft'
 };
+const japanese = window.moezzaJapanese.strings;
 const indonesian = {};
 for (const [attribute, property] of [['data-i18n', 'textContent'], ['data-i18n-aria', 'aria-label'], ['data-i18n-placeholder', 'placeholder'], ['data-i18n-alt', 'alt']]) {
   document.querySelectorAll(`[${attribute}]`).forEach(node => { indonesian[node.getAttribute(attribute)] = property === 'textContent' ? node.textContent : node.getAttribute(property); });
 }
 const language = () => window.moezzaPreferences.language;
-const t = key => (language() === 'en' ? english : indonesian)[key];
+const t = key => ({ id: indonesian, en: english, ja: japanese })[language()][key];
 const messages = {
   id: { nameError: 'Isi nama terlebih dahulu.', messageError: 'Tulis pesan minimal 10 karakter, selain spasi.', ready: 'Draf siap diunduh. Pesan belum dikirim.', failed: 'Draf belum bisa disiapkan. Salin pesan dari formulir atau coba lagi.', draftTitle: 'Draf pesan untuk Moezza', notSent: 'Belum dikirim' },
   en: { nameError: 'Please enter your name.', messageError: 'Write at least 10 characters, excluding surrounding spaces.', ready: 'Your draft is ready to download. It has not been sent.', failed: 'Could not prepare the draft. Copy your message from the form or try again.', draftTitle: 'Message draft for Moezza', notSent: 'Not sent' }
 };
+messages.ja = window.moezzaJapanese.messages;
 const features = [
   {
     image: 'chat-ideas.webp',
@@ -74,6 +76,7 @@ const features = [
     en: { kind: 'Settings', title: 'Keep settings close at hand', description: 'Adjust language, theme, privacy, and open model management from one place.', alt: 'Moezza app settings screen' }
   }
 ];
+features.forEach((feature, index) => { feature.ja = window.moezzaJapanese.features[index]; });
 const menuButton = document.querySelector('.menu-button');
 const navigation = document.querySelector('#main-nav');
 const navLinks = [...navigation.querySelectorAll('a')];
@@ -248,7 +251,7 @@ function translate() {
   document.querySelectorAll('[data-i18n-aria]').forEach(node => { node.setAttribute('aria-label', t(node.dataset.i18nAria)); });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(node => { node.setAttribute('placeholder', t(node.dataset.i18nPlaceholder)); });
   document.querySelectorAll('[data-i18n-alt]').forEach(node => { node.setAttribute('alt', t(node.dataset.i18nAlt)); });
-  document.title = language() === 'id' ? 'Moezza | Ruang untuk pikiranmu' : 'Moezza | Room for your thoughts';
+  document.title = ({ id: 'Moezza | Ruang untuk pikiranmu', en: 'Moezza | Room for your thoughts', ja: 'もえっつぁ | かんがえる ための ばしょ' })[language()];
   document.querySelector('meta[name="description"]').content = t('heroDescription');
   status.textContent = statusKey ? messages[language()][statusKey] : '';
   if (movingFeature) finishFeatureMove();
@@ -272,12 +275,12 @@ form.addEventListener('submit', event => {
     return;
   }
   const words = messages[language()];
-  const content = `${words.draftTitle}\n${words.notSent}\n\n${t('name')}: ${name}\nEmail: ${String(data.get('email')).trim()}\n${t('topic')}: ${t(data.get('interest'))}\n\n${message}\n`;
+  const content = `${words.draftTitle}\n${words.notSent}\n\n${t('name')}: ${name}\n${t('email')}: ${String(data.get('email')).trim()}\n${t('topic')}: ${t(data.get('interest'))}\n\n${message}\n`;
   try {
     if (draftUrl) URL.revokeObjectURL(draftUrl);
     draftUrl = URL.createObjectURL(new Blob([content], { type: 'text/plain;charset=utf-8' }));
     downloadLink.href = draftUrl;
-    downloadLink.download = language() === 'id' ? 'pesan-untuk-moezza.txt' : 'message-for-moezza.txt';
+    downloadLink.download = ({ id: 'pesan-untuk-moezza.txt', en: 'message-for-moezza.txt', ja: 'moezza-ja.txt' })[language()];
     document.querySelector('#message-preview').textContent = content;
     dialog.showModal();
     setStatus('ready');

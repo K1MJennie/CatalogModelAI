@@ -40,6 +40,8 @@ h1 em, h2 em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.
 .preferences { display: flex; gap: 6px; margin-left: auto; }
 .control { min-width: 44px; min-height: 44px; border: 1px solid var(--border); background: transparent; border-radius: 6px; padding: 7px 10px; font-size: .8rem; font-weight: 600; }
 .control:hover { background: var(--bubble); }
+.language-select { min-width: 64px; text-align: center; }
+:root[lang="ja"] { --heading: system-ui, "Yu Gothic UI", "Meiryo", sans-serif; --body: system-ui, "Yu Gothic UI", "Meiryo", sans-serif; }
 .menu-button { display: flex; align-items: center; gap: 8px; margin-left: auto; }
 .menu-button + .main-nav + .preferences { margin-left: 0; }
 .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 12px 20px; background: var(--surface); border-bottom: 1px solid var(--border); }
@@ -219,7 +221,7 @@ dialog .button { width: 100%; }
   .header-inner { gap: 6px; }
   .wordmark { font-size: 1.65rem; }
   .menu-button { gap: 4px; padding-inline: 7px; }
-  .menu-button span { display: none; }
+  .menu-button span[aria-hidden="true"] { display: none; }
   .control { padding-inline: 8px; }
   .preferences { gap: 4px; }
   h1 { font-size: 2.75rem; }
