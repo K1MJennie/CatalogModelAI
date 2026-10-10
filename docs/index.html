@@ -3,114 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#edf3ee">
-  <meta name="description" content="Moezza membangun teknologi yang terasa dekat. Kenali aplikasi percakapan dengan AI Gemma yang berjalan di perangkat Android.">
-  <title>Moezza | Teknologi yang terasa dekat</title>
+  <meta name="theme-color" content="#F9F8F7">
+  <meta name="description" content="Moezza, ruang untuk ide dan percakapan dengan AI di perangkat Android.">
+  <title>Moezza | Ruang untuk pikiranmu</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <script src="./preferences.js"></script>
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Lewati ke konten</a>
-  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <defs>
-      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6 4V6a2 2 0 0 1 2-2Z"/><path d="M7 9h10M7 13h6"/></symbol>
-      <symbol id="i-device" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 5h4M11 19h2"/></symbol>
-      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
-      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-      <symbol id="i-chip" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/></symbol>
-    </defs>
-  </svg>
+  <a class="skip-link" href="#main" data-i18n="skip">Lewati ke konten</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="wordmark" aria-label="Moezza, beranda"><span class="brand-symbol" aria-hidden="true">m<span></span></span>moezza<span class="brand-period">.</span></a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
-      <nav id="main-nav" class="main-nav" aria-label="Navigasi utama">
-        <a href="#home" aria-current="page">Home</a>
-        <a href="#product">Product</a>
-        <a href="#technology">Technology</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <a href="#home" class="wordmark">moezza<span>.</span></a>
+      <button class="menu-button control" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav id="main-nav" class="main-nav" data-i18n-aria="navigation" aria-label="Navigasi utama">
+        <a href="#home" aria-current="page" data-i18n="home">Beranda</a><a href="#product" data-i18n="product">Produk</a><a href="#technology" data-i18n="technology">Teknologi</a><a href="#catalog" data-i18n="catalog">Katalog model</a><a href="#about" data-i18n="about">Tentang</a><a href="#contact" data-i18n="contact">Kontak</a>
       </nav>
-      <a class="header-cta" href="#product">Kenali Moezza <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <div class="preferences"><button class="control" type="button" data-language-toggle>EN</button><button class="control" type="button" data-theme-toggle>Gelap</button></div>
     </div>
   </header>
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section id="home" class="hero section-anchor" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="small-line"></span> Halo, kami Moezza.</p>
-          <h1 id="hero-title">Teknologi yang<br>terasa <span class="near-word">dekat.<svg viewBox="0 0 290 20" aria-hidden="true"><path d="M4 12Q136-4 285 11M48 18q124-12 208-3"/></svg></span></h1>
-          <p class="hero-description">Kami membangun ruang untuk ide, pertanyaan, dan percakapan sehari-hari. Dimulai dari Moezza, teman ngobrol AI yang hadir langsung di perangkatmu.</p>
-          <div class="hero-actions"><a class="button primary" href="#product">Kenalan dengan Moezza <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="text-link" href="#about">Cerita di balik Moezza</a></div>
-          <div class="hero-note"><svg class="icon" aria-hidden="true"><use href="#i-device"/></svg><span>Dibangun untuk Android. Dengan AI on-device.</span></div>
-        </div>
-        <div class="hero-art" aria-label="Ilustrasi konsep aplikasi Moezza">
-          <div class="art-caption"><span>Produk pertama kami</span><strong>Temui Moezza.</strong><svg viewBox="0 0 70 58" aria-hidden="true"><path d="M5 4q58 0 46 40m-10-9 10 12 12-9"/></svg></div>
-          <div class="phone">
-            <div class="phone-camera" aria-hidden="true"></div>
-            <div class="phone-status" aria-hidden="true"><span>09:41</span><span>▮▮▮ &nbsp; ▰</span></div>
-            <div class="phone-heading"><div class="app-mark">m.</div><div><strong>Moezza</strong><span>Ruang kecil untuk ide besar</span></div><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></div>
-            <p class="phone-greeting">Pagi! Mau cerita apa hari ini?</p>
-            <div class="phone-chat-space"><span>Hari ini</span></div>
-            <div class="phone-user">Banyak ide di kepala.<br>Mulai dari mana, ya?</div>
-            <div class="phone-answer"><span>Moezza</span><p>Kita mulai dari satu dulu, yuk. Ceritakan ide yang paling bikin kamu penasaran.</p></div>
-            <div class="phone-composer"><span>Tulis cerita pertamamu...</span><span class="send-circle" aria-hidden="true">↑</span></div>
-            <div class="phone-model"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg> Gemma · di perangkatmu</div>
+          <p class="eyebrow" data-i18n="heroEyebrow">Moezza / Teman berpikir di Android</p>
+          <h1 id="hero-title"><span data-i18n="heroLine">Beri ruang</span><br><span data-i18n="heroEnd">untuk</span> <em data-i18n="heroEm">pikiranmu.</em></h1>
+          <p class="hero-description" data-i18n="heroDescription">Dari ide yang belum rapi sampai rasa penasaran. Mulai percakapan dengan AI, langsung di ponselmu.</p>
+          <a class="button primary" href="#product"><span data-i18n="heroAction">Lihat Moezza berbincang</span><span aria-hidden="true">↗</span></a>
+          <p class="hero-note" data-i18n="heroNote">Android · Model Gemma · AI on-device</p>
+          <div class="hero-tasks" aria-label="Contoh bantuan Moezza" data-i18n-aria="heroTasks">
+            <span><i class="task-icon task-blue" aria-hidden="true">✎</i><span data-i18n="taskWrite">Tulis</span></span>
+            <span><i class="task-icon task-lavender" aria-hidden="true">≡</i><span data-i18n="taskSummarize">Ringkas</span></span>
+            <span><i class="task-icon task-peach" aria-hidden="true">◎</i><span data-i18n="taskImage">Tanya gambar</span></span>
           </div>
-          <div class="local-note"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg><div><strong>AI-nya di sini.</strong><span>Di ponselmu sendiri.</span></div></div>
-          <span class="preview-label">Ilustrasi konsep tampilan aplikasi</span>
         </div>
+        <figure class="hero-art">
+          <div class="hero-art-backdrop" aria-hidden="true"><span class="hero-speech hero-speech-one"></span><span class="hero-speech hero-speech-two"></span></div>
+          <img class="hero-app-image" src="./images/app-home.webp" width="738" height="1475" alt="Tampilan beranda Moezza di ponsel" data-i18n-alt="heroImageAlt" fetchpriority="high">
+          <figcaption data-i18n="heroImageCaption">Cuplikan tampilan aplikasi Moezza dari gambar yang diberikan.</figcaption>
+        </figure>
       </div>
-      <div class="container hero-bottom"><span>Ide yang dekat dengan keseharian.</span><a href="#product">Mulai dari produknya <span aria-hidden="true">↓</span></a></div>
+      <div class="container section-end"><span data-i18n="heroFooter">Pikiran kecil. Kemungkinan baru.</span><a href="#product"><span data-i18n="product">Produk</span><span aria-hidden="true">↓</span></a></div>
     </section>
-
     <section id="product" class="product section-anchor" aria-labelledby="product-title">
       <div class="container">
-        <div class="section-heading"><p class="eyebrow">01 / Product</p><div><h2 id="product-title">Sedikit penasaran.<br>Banyak bahan obrolan.</h2><p>Moezza memberi tempat untuk berpikir bersama AI.<br class="desktop-break"> Dari ide yang belum rapi sampai hal baru yang ingin dipahami.</p></div><span class="section-aside">Moezza untuk Android</span></div>
-        <div class="demo-layout">
-          <div class="use-cases" aria-label="Pilih contoh percakapan">
-            <button class="use-case selected" type="button" data-demo="ideas" aria-pressed="true"><span class="case-number">01</span><span><strong>Temukan awal sebuah ide</strong><small>Uraikan pikiran yang masih ke mana-mana.</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
-            <button class="use-case" type="button" data-demo="learn" aria-pressed="false"><span class="case-number">02</span><span><strong>Pahami hal yang bikin penasaran</strong><small>Minta penjelasan dengan bahasa sehari-hari.</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
-            <button class="use-case" type="button" data-demo="write" aria-pressed="false"><span class="case-number">03</span><span><strong>Cari kata yang lebih pas</strong><small>Susun draf pesan dan temukan nada yang tepat.</small></span><span class="case-arrow" aria-hidden="true">↗</span></button>
-            <p class="demo-instruction">Pilih topik untuk melihat contoh percakapannya.</p>
-          </div>
-          <div class="conversation-demo">
-            <div class="demo-topline"><span><span class="mini-mark">m.</span> Moezza</span><span>Demo percakapan</span></div>
-            <div id="demo-content" class="demo-content" aria-live="polite" aria-atomic="true"><p class="demo-question">Aku mau mulai menulis, tapi bingung topiknya.</p><div class="demo-response"><span class="reply-label">Moezza</span><p>Coba mulai dari sesuatu yang dekat: hal kecil yang kamu pelajari minggu ini.</p><p>Tulis apa yang terjadi, apa yang bikin penasaran, dan apa yang ingin kamu coba berikutnya. Tidak perlu langsung sempurna.</p></div></div>
-            <div class="demo-footnote"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>Contoh terkurasi, bukan jawaban AI langsung.<br>Jawaban AI dapat keliru. Selalu periksa informasi penting.</span></div>
-          </div>
+        <div class="feature-intro">
+          <div><p class="eyebrow" data-i18n="productEyebrow">01 / Fitur Moezza</p><h2 id="product-title"><span data-i18n="productTitle">Satu ruang,</span><br><em data-i18n="productEm">banyak cara membantu.</em></h2></div>
+          <p data-i18n="productDescription">Lihat cara Moezza membantu lewat tampilan aplikasi yang bergeser otomatis.</p>
         </div>
-        <div class="product-principles"><p><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span>Percakapan dengan bahasa alami</span></p><p><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg><span>Model Gemma di perangkat</span></p><p><svg class="icon" aria-hidden="true"><use href="#i-device"/></svg><span>Dirancang untuk Android</span></p></div>
+        <div class="feature-carousel" role="region" aria-roledescription="carousel" aria-label="Fitur aplikasi Moezza" data-i18n-aria="featureCarouselLabel" tabindex="0">
+          <button type="button" id="feature-prev" class="carousel-arrow carousel-arrow-prev" aria-label="Fitur sebelumnya" data-i18n-aria="previousFeature"><span aria-hidden="true">←</span></button>
+          <div class="feature-viewport">
+            <div id="feature-track" class="feature-track">
+              <figure class="carousel-slide is-active" role="group" aria-roledescription="slide" aria-label="Cari ide untuk tugas dan proyek">
+                <img src="./images/chat-ideas.webp" width="738" height="1475" alt="Contoh chat ide proyek AI di Moezza">
+              </figure>
+            </div>
+          </div>
+          <button type="button" id="feature-next" class="carousel-arrow carousel-arrow-next" aria-label="Fitur berikutnya" data-i18n-aria="nextFeature"><span aria-hidden="true">→</span></button>
+        </div>
+        <div class="feature-caption" aria-live="off" aria-atomic="true">
+          <div><p id="feature-kind" class="feature-kind">Contoh chat</p><h3 id="feature-title">Cari ide untuk tugas dan proyek</h3></div>
+          <p id="feature-description">Dari pertanyaan singkat, Moezza membantu menyusun pilihan ide yang bisa mulai kamu kerjakan.</p>
+        </div>
       </div>
     </section>
-
     <section id="technology" class="technology section-anchor" aria-labelledby="technology-title">
-      <div class="container technology-grid">
-        <div class="tech-copy"><p class="eyebrow">02 / Technology</p><h2 id="technology-title">Dekat, sampai<br>ke cara kerjanya.</h2><p>Dengan pendekatan <em>on-device</em>, model AI memproses percakapan langsung di ponsel. Itulah fondasi yang kami pilih untuk Moezza.</p><div class="tech-facts"><div><h3>Gemma sebagai fondasi</h3><p>Keluarga model terbuka dari Google, dengan varian yang dirancang untuk penggunaan di perangkat.</p></div><div><h3>Siapkan model, lalu mulai ngobrol</h3><p>Model perlu diunduh terlebih dahulu. Percakapan lokal dapat berjalan tanpa koneksi setelah model yang kompatibel siap.</p></div></div><a class="text-link" href="./models.html">Lihat katalog model Gemma <span aria-hidden="true">↗</span></a></div>
-        <div class="tech-visual"><div class="device-boundary"><div class="boundary-title"><svg class="icon" aria-hidden="true"><use href="#i-device"/></svg><span>Di dalam perangkatmu</span></div><div class="flow-message">“Bantu aku mengembangkan ide ini.”</div><div class="flow-line" aria-hidden="true">↓</div><div class="gemma-engine"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg><strong>Gemma</strong><span>Model AI lokal</span></div><div class="flow-line" aria-hidden="true">↓</div><div class="flow-answer"><span class="mini-mark">m.</span><span>Respons untuk percakapanmu</span></div><div class="device-caption">Pesan → proses lokal → respons</div></div><p>Ilustrasi alur inferensi lokal. Kecocokan model dan kecepatan respons bergantung pada perangkat.</p></div>
+      <div class="container technology-grid"><div class="tech-copy"><p class="eyebrow" data-i18n="technologyEyebrow">02 / Di balik percakapan</p><h2 id="technology-title"><span data-i18n="techTitle">Dekat denganmu.</span><br><em data-i18n="techEm">Di perangkatmu.</em></h2><p data-i18n="techDescription">Moezza menjalankan model Gemma langsung di ponsel. Setelah model yang kompatibel diunduh, percakapan lokal bisa berjalan tanpa koneksi.</p></div>
+      <figure class="tech-visual"><div class="device-boundary"><div class="boundary-title" data-i18n="deviceBoundary">Di dalam ponselmu</div><div class="flow-message" data-i18n="flowMessage">Bantu aku mengembangkan ide ini.</div><div class="flow-line" aria-hidden="true"></div><div class="gemma-engine"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="10" width="28" height="28" rx="3"/><rect x="17" y="17" width="14" height="14" rx="1"/><path d="M17 3v7m14-7v7M17 38v7m14-7v7M3 17h7m-7 14h7m28-14h7m-7 14h7"/></svg><strong>Gemma</strong><span data-i18n="localModel">Model AI lokal</span></div><div class="flow-line" aria-hidden="true"></div><div class="flow-answer" data-i18n="flowAnswer">Ide jadi bahan percakapan.</div></div><figcaption data-i18n="techCaption">Ilustrasi proses lokal. Kecocokan dan kecepatan bergantung pada model serta perangkat.</figcaption></figure></div>
+    </section>
+    <section id="catalog" class="model-catalog section-anchor" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="catalog-intro">
+          <div><p class="eyebrow" data-i18n="catalogEyebrow">03 / Katalog model</p><h2 id="catalog-title"><span data-i18n="catalogTitle">Kenali modelnya.</span><br><em data-i18n="catalogEm">Pilih sesuai kebutuhan.</em></h2></div>
+          <p data-i18n="catalogIntro">Beberapa anggota keluarga Gemma, dari model ringkas untuk perangkat mobile hingga model yang membutuhkan perangkat lebih kuat.</p>
+        </div>
+        <div class="model-grid">
+          <article class="model-card model-card-featured"><div class="model-card-top"><span class="model-family">Gemma 4</span><span class="model-mark" aria-hidden="true">✦</span></div><h3>Gemma 4 E4B</h3><p data-i18n="model4e4b">Model kecil untuk perangkat. Menerima teks, gambar, dan audio.</p><dl><div><dt data-i18n="modelSize">Parameter</dt><dd data-i18n="model4e4bSize">4,5B efektif</dd></div><div><dt data-i18n="modelContext">Konteks</dt><dd>128K token</dd></div></dl><a href="https://ai.google.dev/gemma/docs/core/model_card_4" target="_blank" rel="noopener noreferrer"><span data-i18n="modelSource">Spesifikasi resmi</span><span aria-hidden="true">↗</span></a></article>
+          <article class="model-card"><div class="model-card-top"><span class="model-family">Gemma 4</span><span class="model-mark" aria-hidden="true">✳</span></div><h3>Gemma 4 E2B</h3><p data-i18n="model4e2b">Varian lebih ringkas dengan input teks, gambar, dan audio.</p><dl><div><dt data-i18n="modelSize">Parameter</dt><dd data-i18n="model4e2bSize">2,3B efektif</dd></div><div><dt data-i18n="modelContext">Konteks</dt><dd>128K token</dd></div></dl><a href="https://ai.google.dev/gemma/docs/core/model_card_4" target="_blank" rel="noopener noreferrer"><span data-i18n="modelSource">Spesifikasi resmi</span><span aria-hidden="true">↗</span></a></article>
+          <article class="model-card"><div class="model-card-top"><span class="model-family">Gemma 4</span><span class="model-mark" aria-hidden="true">◈</span></div><h3>Gemma 4 12B Unified</h3><p data-i18n="model412b">Varian lebih besar untuk teks, gambar, dan audio.</p><dl><div><dt data-i18n="modelSize">Parameter</dt><dd>11,95B</dd></div><div><dt data-i18n="modelContext">Konteks</dt><dd>256K token</dd></div></dl><a href="https://ai.google.dev/gemma/docs/core/model_card_4" target="_blank" rel="noopener noreferrer"><span data-i18n="modelSource">Spesifikasi resmi</span><span aria-hidden="true">↗</span></a></article>
+          <article class="model-card"><div class="model-card-top"><span class="model-family">Gemma 3n</span><span class="model-mark" aria-hidden="true">✳</span></div><h3>Gemma 3n E4B</h3><p data-i18n="model3ne4b">Dirancang untuk perangkat sehari-hari dengan input teks, gambar, dan audio.</p><dl><div><dt data-i18n="modelSize">Parameter</dt><dd data-i18n="model3ne4bSize">4B efektif</dd></div><div><dt data-i18n="modelContext">Konteks</dt><dd>32K token</dd></div></dl><a href="https://ai.google.dev/gemma/docs/gemma-3n" target="_blank" rel="noopener noreferrer"><span data-i18n="modelSource">Spesifikasi resmi</span><span aria-hidden="true">↗</span></a></article>
+          <article class="model-card"><div class="model-card-top"><span class="model-family">Gemma 3n</span><span class="model-mark" aria-hidden="true">◈</span></div><h3>Gemma 3n E2B</h3><p data-i18n="model3ne2b">Varian ringan untuk perangkat mobile; menerima teks, gambar, dan audio.</p><dl><div><dt data-i18n="modelSize">Parameter</dt><dd data-i18n="model3ne2bSize">2B efektif</dd></div><div><dt data-i18n="modelContext">Konteks</dt><dd>32K token</dd></div></dl><a href="https://ai.google.dev/gemma/docs/gemma-3n" target="_blank" rel="noopener noreferrer"><span data-i18n="modelSource">Spesifikasi resmi</span><span aria-hidden="true">↗</span></a></article>
+          <article class="model-card"><div class="model-card-top"><span class="model-family">Gemma 3</span><span class="model-mark" aria-hidden="true">✦</span></div><h3>Gemma 3 4B</h3><p data-i18n="model34b">Model teks dan gambar dengan ruang konteks yang panjang.</p><dl><div><dt data-i18n="modelSize">Parameter</dt><dd>4B</dd></div><div><dt data-i18n="modelContext">Konteks</dt><dd>128K token</dd></div></dl><a href="https://ai.google.dev/gemma/docs/core/model_card_3" target="_blank" rel="noopener noreferrer"><span data-i18n="modelSource">Spesifikasi resmi</span><span aria-hidden="true">↗</span></a></article>
+        </div>
+        <p class="catalog-note" data-i18n="catalogNote">Ini ringkasan keluarga model Gemma, bukan daftar model yang pasti tersedia di Moezza. Kecocokan bergantung pada perangkat dan versi aplikasi.</p>
       </div>
     </section>
-
     <section id="about" class="about section-anchor" aria-labelledby="about-title">
-      <div class="container"><div class="about-top"><p class="eyebrow">03 / About Moezza</p><span>Baru mulai. Punya arah.</span></div><h2 id="about-title">Kami ingin teknologi<br>terasa lebih <span>manusiawi.</span></h2><div class="about-bottom"><div class="founder-note"><span class="note-symbol" aria-hidden="true">“</span><p>Berawal dari pertanyaan sederhana:<br>bagaimana kalau AI bisa terasa<br>lebih dekat dengan keseharian kita?</p><span>Gagasan di balik Moezza</span></div><div class="about-copy"><p>Moezza adalah startup yang sedang membangun jawabannya. Produk pertama kami adalah aplikasi percakapan bernama Moezza, yang mempertemukan model AI lokal dengan pengalaman yang ramah.</p><p>Kami ingin tumbuh lewat produk yang berguna dan masukan yang jujur. Masih banyak yang ingin kami pelajari, dan kami membuka ruang untuk percakapan itu.</p><a class="text-link" href="#contact">Mari bertukar pikiran <span aria-hidden="true">↗</span></a></div></div></div>
-      <div class="container company-profile" aria-labelledby="company-profile-title">
-        <h3 id="company-profile-title">Profil singkat</h3>
-        <dl>
-          <div><dt>Nama startup</dt><dd>Moezza</dd></div>
-          <div><dt>Produk pertama</dt><dd>Moezza</dd></div>
-          <div><dt>Email (contoh)</dt><dd>halo@moezza.ai.org</dd></div>
-          <div><dt>Telepon (contoh)</dt><dd>+62 800 0000 0000</dd></div>
-        </dl>
-        <p class="profile-disclaimer">Data kontak ini contoh untuk rancangan dan belum aktif.</p>
+      <div class="container story-grid">
+        <div class="story-intro"><p class="eyebrow" data-i18n="aboutEyebrow">04 / Cerita Moezza</p><h2 id="about-title"><span data-i18n="aboutTitle">Berawal dari ide.</span><br><em data-i18n="aboutEm">Kini jadi ruang bicara.</em></h2><p data-i18n="aboutDescription">Dari pertanyaan pertama di bulan Agustus sampai halaman yang kamu lihat hari ini.</p><a class="text-link" href="#contact" data-i18n="aboutAction">Bagikan pandanganmu</a></div>
+        <ol class="story-timeline" aria-label="Linimasa pengembangan Moezza" data-i18n-aria="timelineLabel">
+          <li><span class="timeline-date" data-i18n="storyDate1">5 Agu 2026</span><div><h3 data-i18n="storyTitle1">Ide pertama</h3><p data-i18n="storyText1">Moezza bermula dari gagasan membuat teman berpikir yang bisa dibawa di ponsel.</p></div></li>
+          <li><span class="timeline-date" data-i18n="storyDate2">17 Agu 2026</span><div><h3 data-i18n="storyTitle2">Rancang tampilan</h3><p data-i18n="storyText2">Alur percakapan dan desain aplikasi mulai disusun.</p></div></li>
+          <li><span class="timeline-date" data-i18n="storyDate3">3 Sep 2026</span><div><h3 data-i18n="storyTitle3">Mulai membangun</h3><p data-i18n="storyText3">Pengembangan aplikasi dimulai.</p></div></li>
+          <li><span class="timeline-date" data-i18n="storyDate4">16 Sep 2026</span><div><h3 data-i18n="storyTitle4">Lanjut dikembangkan</h3><p data-i18n="storyText4">Pengembangan berlanjut dan tampilan aplikasi mulai dirapikan.</p></div></li>
+          <li><span class="timeline-date" data-i18n="storyDate5">28 Sep 2026</span><div><h3 data-i18n="storyTitle5">Uji aplikasi</h3><p data-i18n="storyText5">Alur penggunaan dan tampilan aplikasi diuji.</p></div></li>
+          <li><span class="timeline-date" data-i18n="storyDate6">10 Okt 2026</span><div><h3 data-i18n="storyTitle6">Web Moezza hadir</h3><p data-i18n="storyText6">Kini cerita dan contoh penggunaan Moezza bisa dilihat di sini.</p></div></li>
+        </ol>
       </div>
     </section>
-
     <section id="contact" class="contact section-anchor" aria-labelledby="contact-title">
-      <div class="container contact-grid"><div class="contact-copy"><p class="eyebrow">04 / Contact</p><h2 id="contact-title">Obrolan baik<br>dimulai dari halo.</h2><p>Punya masukan untuk aplikasi Moezza, ide kolaborasi, atau ingin mengenal startup kami lebih dekat? Susun pesanmu di sini.</p><div class="contact-notice"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><p>Kontak pada profil masih berupa contoh.<br>Untuk saat ini, kamu bisa menyimpan draf pesan. Formulir ini belum mengirim pesan ke tim.</p></div></div><form id="contact-form" class="contact-form"><div class="form-row"><div class="field"><label for="name">Namamu</label><input id="name" name="name" autocomplete="name" placeholder="Nama panggilan juga boleh" required maxlength="100"></div><div class="field"><label for="email">Alamat email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nama@email.com" required maxlength="254"></div></div><div class="field"><label for="interest">Ingin membahas apa?</label><select id="interest" name="interest"><option>Masukan untuk produk</option><option>Kolaborasi dengan Moezza</option><option>Mengenal Moezza</option></select></div><div class="field"><label for="message">Pesanmu</label><textarea id="message" name="message" rows="4" required minlength="10" maxlength="3000" placeholder="Ceritakan ide atau pertanyaanmu (minimal 10 karakter)"></textarea></div><div class="form-bottom"><span>Draf hanya disimpan di perangkatmu.</span><button type="submit" class="button primary">Siapkan pesan <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div><p id="form-status" class="form-status" role="status"></p></form></div>
+      <div class="container contact-grid"><div class="contact-copy"><p class="eyebrow" data-i18n="contactEyebrow">05 / Ruang untuk masukan</p><h2 id="contact-title"><span data-i18n="contactTitle">Dari kamu,</span><br><em data-i18n="contactEm">untuk Moezza.</em></h2><p data-i18n="contactDescription">Punya ide atau masukan? Susun pesanmu di sini.</p><p class="contact-notice" data-i18n="contactNotice">Kanal kontak belum aktif. Formulir ini membuat draf untuk diunduh, bukan mengirim pesan.</p></div><form id="contact-form" class="contact-form"><div class="form-row"><div class="field"><label for="name" data-i18n="name">Nama</label><input id="name" name="name" autocomplete="name" required maxlength="100"></div><div class="field"><label for="email" data-i18n="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254"></div></div><div class="field"><label for="interest" data-i18n="topic">Topik</label><select id="interest" name="interest"><option value="feedback" data-i18n="feedback">Masukan produk</option><option value="collaboration" data-i18n="collaboration">Kolaborasi</option><option value="introduction" data-i18n="introduction">Mengenal Moezza</option></select></div><div class="field"><label for="message" data-i18n="message">Pesan</label><textarea id="message" name="message" rows="4" required minlength="10" maxlength="3000" data-i18n-placeholder="messagePlaceholder" placeholder="Tulis ide atau pertanyaanmu (minimal 10 karakter)"></textarea></div><div class="form-bottom"><span data-i18n="draftLocal">Draf dibuat di perangkatmu.</span><button type="submit" class="button primary" data-i18n="prepareDraft">Siapkan draf</button></div><p id="form-status" class="form-status" role="status"></p></form></div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-top"><a class="wordmark" href="#home" aria-label="Moezza, kembali ke beranda"><span class="brand-symbol" aria-hidden="true">m<span></span></span>moezza<span class="brand-period">.</span></a><p>Teknologi yang terasa dekat.</p><a class="back-top" href="#home">Kembali ke atas <span aria-hidden="true">↑</span></a></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Moezza</span><span>Dibangun dengan rasa ingin tahu.</span><span>Produk pertama Moezza: aplikasi chat AI di perangkat.</span></div></footer>
-  <dialog id="message-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title">Draf pesanmu siap.</h2><button type="button" class="dialog-close" aria-label="Tutup draf pesan">×</button></div><p>Pesan ini belum dikirim. Unduh salinannya untuk disimpan sampai kanal kontak Moezza tersedia.</p><pre id="message-preview"></pre><a id="download-message" class="button primary" download="pesan-untuk-moezza.txt">Unduh draf .txt</a></dialog>
+  <footer class="site-footer"><div class="container footer-top"><div><a class="wordmark" href="#home">moezza<span>.</span></a><p data-i18n="footerDescription">Ruang untuk pikiranmu.</p></div><nav class="footer-nav" data-i18n-aria="footerNavigation" aria-label="Navigasi footer"><a href="#product" data-i18n="product">Produk</a><a href="#catalog" data-i18n="catalog">Katalog model</a><a href="#about" data-i18n="about">Tentang</a><a href="#contact" data-i18n="contact">Kontak</a></nav><div class="footer-contact"><p data-i18n="contactExamples">Kontak contoh · belum aktif</p><span>halo@moezza.ai.org</span><span>+62 800 0000 0000</span></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Moezza</span><a href="#home"><span data-i18n="backTop">Kembali ke atas</span><span aria-hidden="true">↑</span></a></div></footer>
+  <dialog id="message-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><h2 id="dialog-title" data-i18n="draftReady">Draf pesanmu siap.</h2><button type="button" class="dialog-close control" data-i18n-aria="closeDraft" aria-label="Tutup draf">×</button></div><p data-i18n="draftDisclaimer">Pesan belum dikirim. Unduh salinannya untuk disimpan.</p><pre id="message-preview"></pre><a id="download-message" class="button primary" download="pesan-untuk-moezza.txt" data-i18n="downloadDraft">Unduh draf .txt</a></dialog>
 </body>
 </html>
